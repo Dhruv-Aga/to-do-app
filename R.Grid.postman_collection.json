@@ -1,0 +1,384 @@
+{
+	"info": {
+		"_postman_id": "d201b7b6-1c6b-40a1-b1b3-003ef0635db4",
+		"name": "R.Grid",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Sign Up API",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "HTTP_AUTHORIZATION",
+						"type": "text",
+						"value": "AUTH \\xf3\\x8d\\xfd\\xe7\\xdd4\\xdf\\x97c\\x92h\\xdd\\x9aIf\\x9aj\"\\x98\\xe2\\xa6"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{ \t\n\t\"user\": {\n\t\t\"name\": \"Dhruv Agarwal\",\n\t\t\"mobile\": 1207723389,\n\t\t\"password\": \"djkmjdmklmmmoim@OKm\",\n\t\t\"email\": \"oim@OKm.com\"\n\t}\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "127.0.0.1:3000/api/v1/users/signup/",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"v1",
+						"users",
+						"signup",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Login API",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjVmM2Q3OWU0ZjVkM2ExMjExODQ0YTk4NSIsImVtYWlsIjoib2ltQG9rbS5jb20iLCJleHAiOjE2MDMwNTEwMTAsImlhdCI6MTU5Nzg2NzAxMH0.hsuWThX89TDJgiFo_JhAHmbTpXh7bs-KYM2k8zuKDKg",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "AUTH NDg4NTI1NDA3MDowNzZRTjU=",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{ \t\r\n\t\"user\": {\r\n\t\t\"password\": \"djkmjdmklmmmoim@OKm\",\r\n\t\t\"email\": \"oim@OKm.com\"\r\n\t}\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "127.0.0.1:3000/api/v1/users/login/",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"v1",
+						"users",
+						"login",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Logout API",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "127.0.0.1:3000/api/v1/users/logout/",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"v1",
+						"users",
+						"logout",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "User Data (SELF)",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjVmM2Q3OWU0ZjVkM2ExMjExODQ0YTk4NSIsImVtYWlsIjoib2ltQG9rbS5jb20iLCJleHAiOjE2MDMwNTEwMTAsImlhdCI6MTU5Nzg2NzAxMH0.hsuWThX89TDJgiFo_JhAHmbTpXh7bs-KYM2k8zuKDKg",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "127.0.0.1:3000/api/v1/users/detail/",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"v1",
+						"users",
+						"detail",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create New Task",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjVmM2Q3OWU0ZjVkM2ExMjExODQ0YTk4NSIsImVtYWlsIjoib2ltQG9rbS5jb20iLCJleHAiOjE2MDMwNTEwMTAsImlhdCI6MTU5Nzg2NzAxMH0.hsuWThX89TDJgiFo_JhAHmbTpXh7bs-KYM2k8zuKDKg",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"task\": {\r\n        \"title\": \"Hi\",\r\n        \"state\": 0\r\n    }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "127.0.0.1:3000/api/v1/tasks/",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"v1",
+						"tasks",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get All Task",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjVmM2Q3OWU0ZjVkM2ExMjExODQ0YTk4NSIsImVtYWlsIjoib2ltQG9rbS5jb20iLCJleHAiOjE2MDMwNTEwMTAsImlhdCI6MTU5Nzg2NzAxMH0.hsuWThX89TDJgiFo_JhAHmbTpXh7bs-KYM2k8zuKDKg",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "127.0.0.1:3000/api/v1/tasks/?sort=0",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"v1",
+						"tasks",
+						""
+					],
+					"query": [
+						{
+							"key": "sort",
+							"value": "0"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update Task",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjVmM2Q3OWU0ZjVkM2ExMjExODQ0YTk4NSIsImVtYWlsIjoib2ltQG9rbS5jb20iLCJleHAiOjE2MDMwNTEwMTAsImlhdCI6MTU5Nzg2NzAxMH0.hsuWThX89TDJgiFo_JhAHmbTpXh7bs-KYM2k8zuKDKg",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"task\": {\r\n        \"_id\": \"5f3d8f38cadf5f3984fd1745\",\r\n        \"title\": \"Hi 22\",\r\n        \"state\": 0,\r\n        \"task_created_by\": \"5f3d79e4f5d3a1211844a985\",\r\n        \"createdAt\": \"2020-08-19T20:29:36.192Z\",\r\n        \"updatedAt\": \"2020-08-19T20:29:36.192Z\",\r\n        \"__v\": 0\r\n    }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "127.0.0.1:3000/api/v1/tasks/",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"v1",
+						"tasks",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Task",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjVmM2Q3OWU0ZjVkM2ExMjExODQ0YTk4NSIsImVtYWlsIjoib2ltQG9rbS5jb20iLCJleHAiOjE2MDMwNTEwMTAsImlhdCI6MTU5Nzg2NzAxMH0.hsuWThX89TDJgiFo_JhAHmbTpXh7bs-KYM2k8zuKDKg",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"task\": {\r\n        \"_id\": \"5f3d8f38cadf5f3984fd1745\",\r\n        \"title\": \"Hi 22\",\r\n        \"state\": 0,\r\n        \"task_created_by\": \"5f3d79e4f5d3a1211844a985\",\r\n        \"createdAt\": \"2020-08-19T20:29:36.192Z\",\r\n        \"updatedAt\": \"2020-08-19T20:29:36.192Z\",\r\n        \"__v\": 0\r\n    }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "127.0.0.1:3000/api/v1/tasks/",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"v1",
+						"tasks",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Script: Manager",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjVmM2Q3OWU0ZjVkM2ExMjExODQ0YTk4NSIsImVtYWlsIjoib2ltQG9rbS5jb20iLCJleHAiOjE2MDMwNTEwMTAsImlhdCI6MTU5Nzg2NzAxMH0.hsuWThX89TDJgiFo_JhAHmbTpXh7bs-KYM2k8zuKDKg",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"task\": {\r\n        \"_id\": \"5f3d8f38cadf5f3984fd1745\",\r\n        \"title\": \"Hi 22\",\r\n        \"state\": 0,\r\n        \"task_created_by\": \"5f3d79e4f5d3a1211844a985\",\r\n        \"createdAt\": \"2020-08-19T20:29:36.192Z\",\r\n        \"updatedAt\": \"2020-08-19T20:29:36.192Z\",\r\n        \"__v\": 0\r\n    }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "127.0.0.1:3000/api/v1/tasks/",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"v1",
+						"tasks",
+						""
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}
